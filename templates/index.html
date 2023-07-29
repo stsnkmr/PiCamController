@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Raspberry Pi Camera Control</h1>
+
+    <p id="status" class="status">Loading...</p>
+    <div id="recordingBtns" class="recordingBtns">
+        <button id="startBtn" class="btn">Start Recording</button>
+        <button id="stopBtn" class="btn">Stop Recording</button>
+    </div>
+    <div id="listBtns" class="listBtns">
+        <a href="{{ url_for("video_list") }}">
+            <button id="listBtn" class="btn">List Videos</button>
+        </a>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,132 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #FF77DD;
+    text-shadow: 2px 2px #FFE4FF;
+}
+
+.status {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #FF99FF;
+}
+
+.recordingBtns {
+    margin-top: 20px;
+}
+
+.listBtns {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF77DD;
+    color: white;
+    margin: 5px;
+    box-shadow: 2px 2px #FFE4FF;
+}
+
+.btn:hover {
+    background-color: #FF66CC;
+}
+
+.listBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF99FF;
+    color: white;
+    margin: 5px;
+    box-shadow: 2px 2px #FFE4FF;
+}
+
+.listBtn:hover {
+    background-color: #FF88FF;
+}
+
+.startBtn:hover,
+.stopBtn:hover {
+    background-color: #FF66CC !important;
+}
+
+table.yumekawa-table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #FF99FF;
+    padding: 10px;
+    color: white;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFDDEE;
+}
+
+tbody tr:hover {
+    background-color: #FFCCDD;
+}
+
+a.yumekawa-link {
+    color: #FF77DD;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a.yumekawa-link:hover {
+    color: #FF66CC;
+}
+
+.backBtn {
+    text-align: left !important;
+}
+
+@media screen and (max-width: 480px) {
+    /* スマートフォン用のスタイル */
+    h1 {
+        font-size: 24px;
+    }
+
+    .status {
+        font-size: 16px;
+    }
+
+    .recordingBtns {
+        margin-top: 10px;
+    }
+
+    .listBtns {
+        margin-top: 5px;
+    }
+
+    .startBtn,
+    .stopBtn,
+    .listBtn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

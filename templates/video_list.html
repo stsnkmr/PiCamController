@@ -1,0 +1,33 @@
+<!-- video_list.html -->
+{% extends "base.html" %}
+{% block title %} Video List {% endblock %}
+{% block content %}
+    <h1>Video List</h1>
+    <table class=" yumekawa-table">
+        <thead>
+        <tr>
+            <th>タイトル</th>
+            <th>長さ</th>
+            <th>ファイルサイズ</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for video in videos %}
+            <tr id={{ video.filename }}>
+                <td><a href="{{ url_for('download_video',filename=video.filename) }}">{{ video.filename }}</a></td>
+                <td>{{ video.length }}</td>
+                <td>{{ video.size }}MB</td>
+                <td>
+                    <button class="btn deleteBtn">Delete</button>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button class="btn backBtn" onclick=location.href="{{ url_for('index') }}">Back</button>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ url_for('static', filename='video_list.js') }}"></script>
+{% endblock %}
